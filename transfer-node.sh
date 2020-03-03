@@ -103,7 +103,6 @@ $SUDO systemctl daemon-reload
 $SUDO systemctl enable $GETH_SERVICE_NAME 
 $SUDO systemctl enable $WORKER_SERVICE_NAME 
 $SUDO systemctl start $GETH_SERVICE_NAME
-$SUDO systemctl start $WORKER_SERVICE_NAME 
 
 echo "Waiting while Geth start sync"
 sleep 10
@@ -119,7 +118,7 @@ while [[ $GETH_TIMESTAMP_DIFF > 120 ]]; do
 done
 
 echo -e $green"Geth synced --> Ursula service restart"
-$SUDO systemctl restart $WORKER_SERVICE_NAME 
+$SUDO systemctl start $WORKER_SERVICE_NAME 
 
 echo -e $green"If Ursula status is online, then all started properly"
 $SUDO systemctl status $WORKER_SERVICE_NAME 
