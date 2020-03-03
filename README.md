@@ -14,8 +14,9 @@ For example you can use `scp`
 `user` - username on remote machine  
 `new_machine_ip` - ip of remote machine  
 
-3. Log in via ssh on a new machine and run command below
-`curl -s https://raw.githubusercontent.com/c29r3/nucypher-node-migrate/master/transfer-node.sh KEYRING_PASSWORD WORKER_ETH_PASSWORD`  
+3. Log in via ssh on a new machine and run command below  
+`curl -s https://raw.githubusercontent.com/c29r3/nucypher-node-migrate/master/transfer-node.sh KEYRING_PASSWORD WORKER_ETH_PASSWORD`    
+  
 Don't forget to replace `KEYRING_PASSWORD` and `WORKER_ETH_PASSWORD` on your values
 
 
