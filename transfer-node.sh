@@ -2,8 +2,8 @@
 # Auto transfer Nucypher node to another machine #
 
 # Specify your passwords
-KEYRING_PASSWORD="YOUR_PASSWORD_HERE"
-WORKER_ETH_PASSWORD="YOUR_PASSWORD_HERE"
+KEYRING_PASSWORD=$1
+WORKER_ETH_PASSWORD=$2
 GETH_SERVICE_NAME="geth-light-node.service"
 GETH_NODE_MODE="fast"
 WORKER_SERVICE_NAME="ursula-worker.service"
