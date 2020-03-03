@@ -8,7 +8,7 @@ The script is designed to deploy the Nucypher node backup on a new machine
 1. Make backup using command below  
 `curl -s https://raw.githubusercontent.com/c29r3/nucypher-backup-script/master/backup.sh | bash`
 
-2. Move the backup to the machine where you plan to deploy it
+2. Move the backup to the machine where you plan to deploy it  
 `scp ~/*.tar.gz user@new_machine_ip:~/`   
 `user` - username on remote machine  
 `new_machine_ip` - ip of remote machine  
