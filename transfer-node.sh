@@ -8,7 +8,7 @@ GETH_SERVICE_NAME="geth-light-node.service"
 GETH_NODE_MODE="fast"
 WORKER_SERVICE_NAME="ursula-worker.service"
 
-REQUIREMENTS="ethereum curl jq python3-pip libffi-dev python3-virtualenv build-essential python3-dev"
+REQUIREMENTS="ethereum curl jq python3-pip libffi-dev python3-virtualenv build-essential python3-dev python3-venv"
 green="\e[92m"
 red="\e[91m"
 normal="\e[39m"
@@ -21,7 +21,7 @@ else
 fi
 
 echo -e $green"Installing requirements:"
-echo -e $normal"ethereum\ncurl\njq\npython3-pip\nlibffi-dev\npython3-virtualenv\nbuild-essential\npython3-dev"
+echo -e $normal"ethereum\ncurl\njq\npython3-pip\nlibffi-dev\npython3-virtualenv\nbuild-essential\npython3-dev\npython3-venv"
 $SUDO apt install software-properties-common -y
 $SUDO add-apt-repository -y ppa:ethereum/ethereum
 $SUDO apt update
@@ -41,6 +41,11 @@ fi
 
 echo -e $green"Extracting archive to home folder"
 cd $HOME && time tar xzf $BACKUP_ARCHIVE
+
+echo -e $green"Creating virtual environment and install Nucpyher"
+python3 -m venv $HOME/nucypher-venv
+source $HOME/nucypher-venv/bin/activate
+pip3 install nucypher
 
 
 URSULA_JSON="$HOME/.local/share/nucypher/ursula.json"
