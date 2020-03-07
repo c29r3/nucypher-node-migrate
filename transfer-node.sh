@@ -4,7 +4,7 @@
 # Specify your passwords
 KEYRING_PASSWORD=$1
 WORKER_ETH_PASSWORD=$2
-GETH_SERVICE_NAME="geth-light-node.service"
+GETH_SERVICE_NAME="geth.service"
 GETH_NODE_MODE="fast"
 WORKER_SERVICE_NAME="ursula-worker.service"
 
