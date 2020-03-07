@@ -40,11 +40,11 @@ else
 fi
 
 echo -e $green"Extracting archive to home folder"
-cd $HOME && time tar xzf $BACKUP_ARCHIVE
+cd $HOME && tar xzf $BACKUP_ARCHIVE
 
 echo -e $green"Creating virtual environment and install Nucpyher"
-python3 -m venv $HOME/nucypher-venv
-source $HOME/nucypher-venv/bin/activate
+python3 -m venv ~/nucypher-venv
+source ~/nucypher-venv/bin/activate
 pip3 install nucypher
 
 
