@@ -94,7 +94,7 @@ User=$USER
 Type=simple
 Environment=NUCYPHER_KEYRING_PASSWORD=$KEYRING_PASSWORD
 Environment=NUCYPHER_WORKER_ETH_PASSWORD=$WORKER_ETH_PASSWORD
-ExecStart=$HOME/nucypher-venv/bin/nucypher ursula run --teacher discover.nucypher.network:9151 --poa
+ExecStart=$HOME/nucypher-venv/bin/nucypher ursula run --teacher gemini.nucypher.network:9151 --poa
 Restart=always
 RestartSec=5
 
